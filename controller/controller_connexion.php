@@ -34,7 +34,7 @@
                         $_SESSION['admin'] = true;
                     }
                     $message = "vous etes connecter";
-                    
+                    header('Location: /cyberBlog/showArticle');
                 }
                 else{
                     //message les informations sont incorrectes
