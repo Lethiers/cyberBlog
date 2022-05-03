@@ -13,9 +13,20 @@
             case $path === "/cyberBlog/test" : 
                 include './test.php';
                 break ;
+
             case $path === "/cyberBlog/addUser" : 
                     include './controller_add_user.php';
                     break ;
+                    
+            case $path === "/cyberBlog/createArticle" : 
+                    include './controller/ctrl_article.php';
+                    break ;
+
+
+            case $path === "/cyberBlog/showArticle" : 
+                    include './controller/ctrl_show_article.php';
+                    break ;
+
         //route en cas d'erreur
             case $path !== "/cyberBlog/":
                 include './controler/controler_connexion.php';
