@@ -97,6 +97,23 @@
                 die('Erreur : '.$e->getMessage());
             }
         }
+
+        public function showUserByMail($bdd):array{
+            try{
+                $req = $bdd->prepare('SELECT * FROM utilisateur 
+                WHERE mail_util = :mail_util');
+                $req->execute(array(
+                    'mail_util' => $this->getMailUtil(),
+                ));
+                $data = $req->fetchAll(PDO::FETCH_ASSOC);
+                return $data;
+            }
+            catch(Exception $e)
+            {
+                //affichage d'une exception en cas d’erreur
+                die('Erreur : '.$e->getMessage());
+            }
+        }
     }
 
 
