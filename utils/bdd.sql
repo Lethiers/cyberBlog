@@ -61,7 +61,10 @@ add constraint fk_commenter_article
 foreign key(id_art)
 references article (id_art);
 
-
+insert into role (name_role) values 
+("Admin"),
+("Utilisateur"),
+("Banni");
 
 
 
