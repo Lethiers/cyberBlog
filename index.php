@@ -36,6 +36,9 @@
             case $path === "/cyberBlog/showCategorie" : 
                     include './controller/controler_show_cat.php';
                     break ;
+            case $path === "/cyberBlog/connexion" : 
+                include './controller/controller_connexion.php';
+                break ;
 
         //route en cas d'erreur
             case $path !== "/cyberBlog/":
