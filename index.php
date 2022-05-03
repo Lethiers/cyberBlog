@@ -14,7 +14,7 @@
                 include './test.php';
                 break ;
             case $path === "/cyberBlog/addUser" : 
-                    include './controller_add_user.php';
+                    include './controller/controller_add_user.php';
                     break ;
         //route en cas d'erreur
             case $path !== "/cyberBlog/":

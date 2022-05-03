@@ -5,7 +5,7 @@
         Protected $name_util;
         Protected $first_name_util;
         Protected $mail_util;
-        Protected $pwd_util;
+        Protected $mdp_util;
         Protected $id_role;
         
         //constructeur
@@ -13,8 +13,8 @@
             $this->name_util = $name;
             $this->first_name_util = $first;
             $this->mail_util = $mail;
-            $this->pwd_util = $password;
-            $this->id_role = $id_role;
+            $this->mdp_util = $password;
+            $this->id_role = $role;
         }
         //Getter and Setter
         public function getIdUtil():int{
@@ -30,7 +30,7 @@
             return $this->mail_util;
         }
         public function getPwdUtil():string{
-            return $this->pwd_util;
+            return $this->mdp_util;
         }
         public function getIdRole():int{
             return $this->id_role;
@@ -65,12 +65,12 @@
             $role = $this->getIdRole();
             try{
                 $req = $bdd->prepare('INSERT INTO utilisateur (name_util, first_name_util,
-                mail_util, pwd_util, id_role) VALUES (:name_util, :first_name_util, :mail_util, :pwd_util, :id_role)');
+                mail_util, mdp_util, id_role) VALUES (:name_util, :first_name_util, :mail_util, :mdp_util, :id_role)');
                 $req->execute(array(
                     'name_util' => $name,
                     'first_name_util' => $first,
                     'mail_util' => $mail,
-                    'pwd_util' => $password,
+                    'mdp_util' => $password,
                     'id_role' => $role
                     ));
             }
