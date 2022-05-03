@@ -24,7 +24,7 @@
             $mail = $util->showUserByMail($bdd,);
             //test si le mail n'existe pas 
             if(empty($mail)){
-                $util->createUser($bdd,);
+                $util->createUser($bdd);
 
 
                 //message compté ajouté
