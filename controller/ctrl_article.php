@@ -14,6 +14,7 @@ include './view/view_create_art.php';
 // --------message d'erreur
 $message = "";
 
+
 if (isset($_POST['create_art'])) {
     if (isset($_POST['name_art'])&& !empty($_POST['name_art'])&&
     isset($_POST['content_art'])&& !empty($_POST['content_art']) &&
@@ -25,7 +26,7 @@ if (isset($_POST['create_art'])) {
         $art->setContentArticle($_POST['content_art']);
         $art->setDateArticle($_POST['date_art']);
 
-        $art->newArticle($bdd);
+        $art->newArticle($bdd,$_GET['id']);
 
         $message = 'l\'article '.$art->getNameArticle().' est créé';
 

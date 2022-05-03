@@ -51,14 +51,15 @@ public function setDateArticle($date):void{
 // methodes ------------------------------------
 
 // créer article
-public function newArticle($bdd):void{
+public function newArticle($bdd,$id):void{
     try {
-        $req = $bdd->prepare('INSERT INTO article (name_art, content_art, date_art) 
-        VALUES(:name_art,:content_art,:date_art)');
+        $req = $bdd->prepare('INSERT INTO article (name_art, content_art, date_art,id_cat) 
+        VALUES(:name_art,:content_art,:date_art,:id_cat)');
         $req->execute(array(
             'name_art' => $this->name,
             'content_art' => $this->content,
-            'date_art' => $this->date
+            'date_art' => $this->date,
+            'id_cat' => $id
         ));
         
     } catch (Exception $e) {

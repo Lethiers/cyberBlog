@@ -27,6 +27,16 @@
                     include './controller/ctrl_show_article.php';
                     break ;
 
+
+            case $path === "/cyberBlog/addCategorie" : 
+                    include './controller/controler_add_cat.php';
+                    break ;
+
+
+            case $path === "/cyberBlog/showCategorie" : 
+                    include './controller/controler_show_cat.php';
+                    break ;
+
         //route en cas d'erreur
             case $path !== "/cyberBlog/":
                 include './controler/controler_connexion.php';

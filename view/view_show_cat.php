@@ -11,7 +11,7 @@
 <input type="select">
    <nom>Catégorie</nom>
    <libellé>Choisir Catégorie d'article</libellé>
-   
+   <ul>
     
 </body>
 </html>

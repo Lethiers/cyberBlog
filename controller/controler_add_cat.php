@@ -10,7 +10,7 @@ $categorie = new Categorie(null);
 if(isset($_POST['add'])){
     //test si les champs sont rempli
     if(isset($_POST['name_cat'])  AND 
-    $_POST['cat_cat'] != "" ){
+    $_POST['name_cat'] != "" ){
         //instancier un nouvel objet Article (appel au constructeur)
         $cat = new Categorie($_POST['name_cat']);
         //appel à la méthode addCat de la classe Categorie
@@ -24,6 +24,7 @@ if(isset($_POST['add'])){
     }
 }    
 //Affichage en JS des Messages 
+echo $msg;
 echo "<script>zoneMsg.innerHTML = '$msg'</script>";
 ?>
 

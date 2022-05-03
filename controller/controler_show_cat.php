@@ -11,12 +11,12 @@ $cat = new Categorie(null);
 $tab = $cat->showAllCategorie($bdd);
 //boucle pour afficher la liste des articles (avec le nom et le prix)
 foreach($tab as $value){
-    echo '<select>
+    echo '<li>
     '.$value->name_cat.'
-    
-    </select>';
- 
-
+    <a href="createArticle?id='.$value->id_cat.'">pour créer un article</a>
+    </li>';
 }
+
+echo '<ul>';
 
 ?>
