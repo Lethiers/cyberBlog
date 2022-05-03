@@ -15,7 +15,7 @@
                 break ;
 
             case $path === "/cyberBlog/addUser" : 
-                    include './controller_add_user.php';
+                    include './controller/controller_add_user.php';
                     break ;
                     
             case $path === "/cyberBlog/createArticle" : 

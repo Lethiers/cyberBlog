@@ -1,9 +1,8 @@
 <?php
      //import
-     include './utils/connectBdd.php';
-     include './model/model_user.php';
-     include './model/model_admin.php';
-     include './view/view_add_user.php';
+    include './utils/connectBdd.php';
+    include './model/model_utilisateur.php';
+    include './view/view_add_user.php';
     //test logique:
     //variable qui va contenir les messages erreurs
     $message = "";
@@ -18,7 +17,7 @@
                 $role = 1;
             }
 
-            $util = new Utilisateur($_POST['name_util'], $_POST['first_name_util'], $_POST['mail'], $_['pwd_util'], $role);
+            $util = new Utilisateur($_POST['name_util'], $_POST['first_name_util'], $_POST['mail_util'], $_POST['pwd_util'], $role);
             //hashage du mot de passe -> setPwdUtil()
             $util->setPwdUtil(password_hash($util->getPwdUtil(),PASSWORD_DEFAULT));
             //appel de la méthode qui recherche un utilisateur par son mail

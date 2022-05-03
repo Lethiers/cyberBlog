@@ -1,5 +1,5 @@
 <?php
     //connexion à la BDD
-    $bdd = new PDO('mysql:host=localhost;dbname=blog', 'root','', 
+    $bdd = new PDO('mysql:host=localhost;dbname=', 'root','', 
     array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 ?>
